@@ -1,0 +1,90 @@
+[engineer.logo]
+tokens = [
+    ["lang-id-func", "peter"],
+    ["lang-op-path", "::"],
+    ["lang-op-generic", "&lt;"],
+    ["lang-id-type", "varo"],
+    ["lang-op-generic", "&gt;"],
+    ["lang-op-func", "("],
+    ["lang-op-ref", "&amp;"],
+    ["lang-id-param", "engineer"],
+    ["lang-op-func", ")"],
+    ["lang-op-term", ";"],
+]
+
+[engineer.biography]
+paragraphs = [
+    """\
+    Software engineer who loves solving complex puzzles.  Primarily uses Rust, \
+    Python, and TypeScript on a daily basis but has implemented projects in \
+    several other languages including, but not limited to C, D, and Bash.\
+    """,
+    """\
+    Firmly believes that great code is just as much about the communication \
+    between developers as it is about solving actual problems in the most \
+    efficient, idiomatic, and elegant way possible.  Proponent of lifelong, \
+    continuous learning and initiative-lead self teaching with an extensive \
+    history of mentoring others, knowledge sharing, and collaboration.\
+    """,
+    """\
+    Interested in electronic circuits, embedded development, language design, \
+    software architecture and abstractions, security, privacy, and free / \
+    libre software.\
+    """,
+]
+
+[[engineer.links]]
+url = "https://github.com/petervaro"
+label = "GitHub"
+summary = "Maintains and contributes to free and open source projects."
+
+[[engineer.links]]
+url = "https://stackoverflow.com/users/2188562"
+label = "StackOverflow"
+summary = "Helps with and discusses various technologies and languages."
+
+[[engineer.links]]
+url = "cv/cv.html"
+label = "Curriculum Vitae"
+summary = "Essential facts, skills, experiences, and education."
+
+[designer.logo]
+tokens = [
+    ["brand-first-name", "peter"],
+    ["brand-last-name", "varo"],
+    ["brand-separator", "&bull;"],
+    ["brand-profession", "designer"],
+]
+
+[designer.biography]
+paragraphs = [
+    """\
+    Has worked on bringing a variety of projects to life during a decade-long \
+    practice in graphic design, industrial product design, and jewellery \
+    design.  Throughout these endeavours, the main focus and passion has \
+    always centred on research and experimental work in the field of \
+    generative, algorithm-based, 3D form-finding, and modelling.\
+    """,
+    """\
+    For many years taught as a consultant and faculty lecturer at the \
+    prestigious Moholy-Nagy University of Art and Design in Budapest.  During \
+    that period, helped to launch the interdisciplinary Digital Craft Lab to \
+    combine modern manufacturing and design principles with traditional \
+    craftsmanship.\
+    """,
+    """\
+    Supporter of accessible rapid prototyping techniques, the modern maker \
+    movement, and the efforts to bring back the culture of long-lasting, \
+    repairable product design over the contemporary, disposable consumerism.\
+    """,
+]
+
+[[designer.links]]
+url = "http://sketchandprototype.com"
+label = "Sketch and Prototype"
+summary = "Selected works including both concepts and real-life projects."
+
+[[designer.links]]
+url = "cv/cv.html"
+label = "Curriculum Vitae"
+summary = "Essential facts, skills, experiences, and education."

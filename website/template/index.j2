@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2015 - {{ variables.year_now }} {{ info.name }}. All rights reserved. -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="{{ info.name }} (engineer|designer)">
+        <meta name="keywords" content="{{ ','.join(meta.keywords) }}">
+        <meta name="Author" content="{{ info.name }}">
+        <title>{{ info.name }}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <style>
+            {{ style.css }}
+        </style>
+        <script src="site/js/anim.js"></script>
+        <script src="site/js/index.js"></script>
+    </head>
+    <body>
+        <div id="engineer">
+            <div class="content">
+                <div id="engineer-logo">
+                    {% for style, token in engineer.logo.tokens -%}
+                        <span class="{{ style }}">{{ token }}</span>
+                    {%- endfor %}
+                </div>
+                <div class="text">
+                    <div class="biography">
+                        {% for paragraph in engineer.biography.paragraphs -%}
+                            <p>{{ ' '.join(paragraph) }}</p>
+                        {%- endfor %}
+                    </div>
+                    <div class="links">
+                        {% for link in engineer.links -%}
+                            <a target="_blank"
+                               href="{{ link.url }}"
+                            >
+                                {{- link.label -}}
+                            </a>
+                            <p>{{ link.summary }}</p>
+                        {%- endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="designer">
+            <div class="content">
+                <div id="designer-logo">
+                    {% for style, token in designer.logo.tokens -%}
+                        <span class="{{ style }}">{{ token }}</span>
+                    {%- endfor %}
+                </div>
+                <div class="text">
+                    <div class="biography">
+                        {% for paragraph in designer.biography.paragraphs -%}
+                            <p>{{ ' '.join(paragraph) }}
+                        {%- endfor %}
+                    </div>
+                    <div class="links">
+                        {% for link in designer.links -%}
+                            <a target="_blank"
+                               href="{{ link.url }}"
+                            >
+                                {{- link.label -}}
+                            </a>
+                            <p>{{ link.summary }}</p>
+                        {%- endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="handler">
+            <div>&laquo;&raquo;</div>
+        </div>
+        <script type="text/javascript">
+            main();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+**/.sass-cache
+**/*.css.map
+**/__pycache__
+
+node_modules/
+.venv/
+img/logo/engineer/logo/target/
+
+package-lock.json

@@ -1,0 +1,383 @@
+/* PRE **
+** PRE */
+
+@import "reset";
+
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic);
+
+
+/*----------------------------------------------------------------------------*/
+/* Constants */
+$WIDTH: 30rem;
+$HEIGHT: 48rem;
+$MARGIN: $WIDTH/8;
+$MIN-WIDTH: $WIDTH + $MARGIN*2;
+$MIN-HEIGHT: $HEIGHT;
+
+$NEUTRAL: hsl(0deg, 100%, 100%);
+$HIGHLIGHT: hsl(9deg, 100%,  58%);
+
+$-HUE: 230deg;
+$-SATURATION: 8%;
+$-ENGINEER: 18%;
+$-DESIGNER: 78%;
+$-STEP1: 8%;
+$-STEP2: 24%;
+$-STEP3: 38%;
+$-STEP4: 52%;
+
+$ENGINEER-BRIGHTEST: hsl($-HUE, $-SATURATION, $-ENGINEER + $-STEP4);
+$ENGINEER-BRIGHT: hsl($-HUE, $-SATURATION, $-ENGINEER + $-STEP3);
+$ENGINEER-MEDIUM: hsl($-HUE, $-SATURATION, $-ENGINEER + $-STEP2);
+$ENGINEER-DARK: hsl($-HUE, $-SATURATION, $-ENGINEER + $-STEP1);
+$ENGINEER-DARKEST: hsl($-HUE, $-SATURATION, $-ENGINEER);
+
+$DESIGNER-BRIGHTEST: hsl($-HUE, $-SATURATION, $-DESIGNER);
+$DESIGNER-BRIGHT: hsl($-HUE, $-SATURATION, $-DESIGNER - $-STEP1);
+$DESIGNER-MEDIUM: hsl($-HUE, $-SATURATION, $-DESIGNER - $-STEP2);
+$DESIGNER-DARK: hsl($-HUE, $-SATURATION, $-DESIGNER - $-STEP3);
+$DESIGNER-DARKEST: hsl($-HUE, $-SATURATION, $-DESIGNER - $-STEP4);
+
+
+/*----------------------------------------------------------------------------*/
+*
+{
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------------------------------*/
+html,
+body
+{
+    position: relative;
+    min-width: $MIN-WIDTH;
+    min-height: $MIN-HEIGHT;
+    width: 100%;
+    height: 100%;
+    font-size: 10pt;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------*/
+body
+{
+    font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: historical-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+    hyphens: auto;
+}
+
+/*----------------------------------------------------------------------------*/
+#handler
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: table;
+    z-index: 9999;
+    border-radius: 50%;
+    background: $HIGHLIGHT;
+    cursor: col-resize;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > div
+    {
+        position: relative;
+        top: -0.05rem;
+        display: table-cell;
+        color: $NEUTRAL;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 300;
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer,
+#designer
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer
+{
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: $ENGINEER-DARKEST;
+}
+
+
+/*----------------------------------------------------------------------------*/
+#designer
+{
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    background: $DESIGNER-BRIGHTEST;
+}
+
+/*----------------------------------------------------------------------------*/
+.content
+{
+    position: absolute;
+    width: $WIDTH;
+    height: $HEIGHT;
+    line-height: 1.2;
+    text-align: justify;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.25rem;
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & .biography > p:not(:first-child)
+    {
+        padding-top: 1rem;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer .content
+{
+    right: -($WIDTH/2);
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & .biography
+    {
+        color: $ENGINEER-BRIGHT;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & .links
+    {
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        & a,
+        & a:hover,
+        & a:visited
+        {
+            color: $ENGINEER-BRIGHTEST;
+        }
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        & p
+        {
+            color: $ENGINEER-MEDIUM;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+#designer .content
+{
+    left: -($WIDTH/2);
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & .biography
+    {
+        color: $DESIGNER-DARK;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & .links
+    {
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        & a,
+        & a:hover,
+        & a:visited
+        {
+            color: $DESIGNER-DARKEST;
+        }
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        & p
+        {
+            color: $DESIGNER-MEDIUM;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+.text
+{
+    position: absolute;
+    top: 5.35rem;
+}
+
+/*----------------------------------------------------------------------------*/
+.biography
+{
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > p
+    {
+        text-indent: 1.5rem;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+.links
+{
+    margin-top: 1.5rem;
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > a
+    {
+        text-decoration: none;
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &:not(:first-child)
+        {
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > p
+    {
+        margin-left: 1.5rem;
+        font-style: italic;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer-logo,
+#designer-logo
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &:after
+    {
+        position: absolute;
+        top: 3.3rem;
+        display: block;
+        left: 50%;
+        width: 10rem;
+        height: 1px;
+        margin-left: -5rem;
+        content: '';
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer-logo
+{
+    margin-bottom: 2.5rem;
+    font-size: 1.15rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/*----------------------------------------------------------------------------*/
+#engineer-logo:after
+{
+    background: $ENGINEER-DARK;
+}
+
+/*----------------------------------------------------------------------------*/
+#designer-logo
+{
+    color: $DESIGNER-DARKEST;
+    padding-top: 0.15rem;
+    font-size: 1.05rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+}
+
+/*----------------------------------------------------------------------------*/
+#designer-logo:after
+{
+    background: $DESIGNER-BRIGHT;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.lang
+{
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-id
+    {
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &-func
+        {
+            color: $ENGINEER-BRIGHTEST;
+        }
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &-type
+        {
+            color: $ENGINEER-BRIGHT;
+        }
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &-param
+        {
+            color: $ENGINEER-MEDIUM;
+        }
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-op
+    {
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &-path,
+        &-func
+        {
+            color: $NEUTRAL;
+        }
+
+        /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+        &-generic,
+        &-ref,
+        &-term
+        {
+            color: $HIGHLIGHT;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+.brand
+{
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-first-name
+    {
+        color: $DESIGNER-DARKEST;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-last-name
+    {
+        color: $NEUTRAL;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-separator
+    {
+        font-weight: 700;
+        color: $HIGHLIGHT;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    &-profession
+    {
+        color: $DESIGNER-MEDIUM;
+    }
+}

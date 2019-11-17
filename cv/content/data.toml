@@ -1,0 +1,300 @@
+[basic]
+title = 'Personal Details'
+
+[basic.person]
+label = 'Name'
+
+[basic.contact]
+label = 'Contact'
+value = { email = 'hello@petervaro.com', url = 'https://petervaro.com' }
+
+[skills.engineer]
+title = "Engineering Skills"
+
+[skills.engineer.specialist]
+label = "Specialist"
+value = [
+    "Rust",
+    "C",
+    "Python",
+    "D",
+    ["JavaScript", "TypeScript"],
+    "Bash",
+]
+
+[skills.engineer.enthusiast]
+label = "Enthusiast"
+value = [
+    "Go",
+    "Cython",
+    "NASM",
+    ["Scheme", "Common Lisp"],
+    "Arduino",
+    "GLSL",
+]
+
+[skills.engineer.explorer]
+label = "Explorer"
+value = [
+    "C++",
+    "Haskell"
+]
+
+[skills.engineer.tools]
+label = "Tools"
+value = [
+    "Arch Linux",
+    ["Virtual Box", "QEMU + KVM"],
+    "Docker",
+    ["SublimeText", "Kakoune", "Vim"],
+    "Git",
+    ["GDB", "LLDB", "PDB", "iPDB", "PUDB"],
+    ["Cargo", "Poetry", "Tup", "Scons", "Make"],
+    "Valgrind",
+]
+
+[skills.engineer.other]
+label = "Miscellaneous"
+value = [
+    ["PostgreSQL", "MySQL", "SQLite"],
+    ["JSON", "YAML", "TOML", "INI"],
+    ["CSS", "SCSS"],
+    ["HTML", "XML", "SVG", "Jade", "Jinja"],
+    "OpenSCAD",
+]
+
+[skills.designer]
+title = "Design Skills"
+
+[skills.designer.specialist]
+label = "Specialist"
+value = [
+    "Industrial Product Design",
+    "Jewellery Design",
+    ["UI", "UX", "Graphic Design"],
+    ["3D CAD", "CAM Modelling"],
+    "3D Mesh Modelling",
+    ["3D Printing", "Rapid Prototyping"],
+]
+
+[skills.designer.enthusiast]
+label = "Enthusiast"
+value = [
+    "Metalworking",
+    "Sculpting",
+    ["Typography", "Typesetting"],
+    "3D Rendering",
+]
+
+[skills.designer.explorer]
+label = "Explorer"
+value = [
+    "Photography",
+    "2D Animation",
+]
+
+[skills.designer.tools]
+label = "Tools"
+value = [
+    ["Illustrator", "Inkscape"],
+    ["Flash", "AfterEffects"],
+    ["Krita", "Gimp"],
+    ["Rhinoceros", "SolidWorks", "SolveSpace", "FreeCAD"],
+    ["Blender", "Modo"],
+    ["KeyShot", "LightStudio"],
+    "CrazyBump",
+    "Darktable",
+    ["Fontlab Studio", "Fontographer", "FontForge"],
+]
+
+[experience]
+title = "Experience"
+
+[[experience.jobs]]
+period = "2020 &mdash;"
+company = "Hopster &mdash; Plato Media Ltd."
+title = "Senior Fullstack Software Engineer"
+technologies = [
+    "Google Cloud Platform",
+    "MySQL",
+    "SQLAlchemy",
+    "Brightcove",
+    "Dalet",
+    "WordPress",
+]
+highlights = [
+    """\
+    Orchestrated and implemented the Python 2 to 3 migration of our CMS \
+    including not only the necessary language changes and idiomatic \
+    improvements, but the infrastructural changes (required to support a very \
+    different, backward incompatible runtime of GAE) and therefore the needed \
+    architectural redesign as well.\
+    """,
+    """\
+    Designed and built an asynchronous task executor framework to \
+    declaratively define / compose and run jobs on GCP with built-in \
+    reporting system, monitoring UI, and time-box management (intended to be a \
+    a drop-in replacement for the old App Engine SDK's Pipeline).\
+    """,
+    "Designed and implemented a serverless health monitoring system.",
+    """\
+    Led an outsourced team to restructure, sanitise, and unify a smart TV \
+    application's support of different partners and their platforms.\
+    """,
+]
+
+[[experience.jobs]]
+period = "2018 &mdash; 2020"
+company = "Tassomai Ltd."
+title = "Senior Fullstack Software Engineer"
+technologies = [
+    "Django",
+    "MyPy",
+    "Stripe",
+    "PostgreSQL",
+    "Redis",
+    "Angular",
+    "NgRx",
+]
+highlights = [
+    """\
+    Designed and implemented a low-level, arbitrary length and alignment \
+    bit-parsing and slicing mechanism in Python and C on top of Redis' \
+    bitfields to reduce internal network traffic and size of the in-memory \
+    caching layer.\
+    """,
+    """\
+    Designed and implemented a high-level proxy objects hierarchy on top of \
+    Stripe's API in Python to support the latest SCA requirements as a \
+    backward compatible, robust, idiomatic, and flexible wrapper.\
+    """,
+    """\
+    Designed and implemented a modular, composable, declarative, and reactive \
+    animation framework in TypeScript to support CSS, JavaScript, and \
+    Lotti-animations to unify all animation types and support highly complex \
+    dynamic compositions.\
+    """,
+]
+
+[[experience.jobs]]
+period = "2016 &mdash; 2018"
+company = "We Got POP Ltd."
+title = "Senior Fullstack Software Engineer"
+technologies = [
+    "TurboGears",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "React",
+    "Flow",
+    "Redux",
+]
+highlights = [
+    """\
+    Redesigned and implemented an internal (customer facing) message editor \
+    with integrated support for a large number of key features provided by the \
+    company in Python and JavaScript.\
+    """,
+    """\
+    Designed and implemented an efficient (both size and speed wise) rich-text \
+    protocol and rendering engine in Python and JavaScript to support custom \
+    text field editing and serialisation.\
+    """,
+    """\
+    Implemented native Python 3 support in AWS Lambda in C when Amazon only \
+    supported Python 2 to develop services targeting this version.\
+    """,
+]
+
+[[experience.jobs]]
+period = "2014 &mdash; 2016"
+company = "Kitchen Budapest &mdash; KIBU Innov&aacute;ci&oacute; Nonprofit Kft."
+title = "Creative Software Developer"
+technologies = [
+    "Flask",
+    "SQLAlchemy",
+    "GLFW",
+    "GLEW",
+    "OpenGL",
+    "Oculus SDK",
+    "Arduino",
+]
+highlights = [
+    """\
+    Designed and implemented a modular, extensible, parameterised, and 3D \
+    printable construction toy system in OpenSCAD and an accompanying \
+    framework in Python and Arduino/C++ to make building, programming, and \
+    experimenting with robotics accessible to anyone.\
+    """,
+    """\
+    Designed and implemented an event-driven, high-level, and declarative \
+    hackathon-framework and runtime in C with Python and JavaScript bindings \
+    to help teach and recruit teams to the talent-programme of the company.\
+    """,
+    """\
+    Designed and implemented a hand-gesture-driven 3D modelling VR simulation \
+    in C and Python targeting the Oculus Rift and the Leap Motion, on top of \
+    Blender's game engine to represent the company on an exhibition.\
+    """,
+]
+
+[[experience.jobs]]
+period = "2011 &mdash; 2015"
+company = "Moholy-Nagy University of Art and Design, Budapest"
+title = "Consultant and Faculty Lecturer"
+technologies = [
+    "3D CAD Sculpting",
+    "Rapid Prototyping",
+]
+
+[[experience.jobs]]
+period = "2012 &mdash; 2014"
+company = "Freelance"
+title = "Software Developer"
+technologies = [
+    "compass",
+    "PyQt5",
+    "cvxopt",
+    "PyMunk",
+    "RPi.GPIO",
+    "RhinoPython",
+    "pyd",
+    "pthreads",
+]
+
+[[experience.jobs]]
+period = "2011 &mdash; 2013"
+company = "DEVSIGNER"
+title = "Founder and Lead Designer"
+
+[[experience.jobs]]
+period = "2009 &mdash; 2011"
+company = "Malibu Kft."
+title = "Industrial Product Designer and Concept Artist"
+
+[[experience.jobs]]
+period = "2007 &mdash; 2014"
+company = "Freelance"
+title = "Industrial Product and Graphic Designer"
+
+[[experience.jobs]]
+period = "2007 &mdash; 2008"
+company = "X-Multimedia Shop Kft."
+title = "Apple Genius and Technician"
+
+[education]
+title = "Education"
+
+[[education.schools]]
+period = "2011 &mdash; 2013"
+faculty = "Metal Worker and Jewellery Designer, BA"
+institution = "Moholy-Nagy University of Art and Design, Budapest"
+
+[[education.schools]]
+period = "2008 &mdash; 2010"
+faculty = "Industrial Product Designer, BA"
+institution = "Moholy-Nagy University of Art and Design, Budapest"
+
+[[education.schools]]
+period = "2005 &mdash; 2007"
+faculty = "Industrial Product Designer, BSc"
+institution = "Budapest University of Technology and Economics"

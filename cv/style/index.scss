@@ -1,0 +1,151 @@
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@import "reset";
+@import "_constants";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700);
+
+
+/*----------------------------------------------------------------------------*/
+*
+{
+    box-sizing: border-box;
+}
+
+
+/*----------------------------------------------------------------------------*/
+html,
+body
+{
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 12pt;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: historical-ligatures;
+    font-variant-ligatures: contextual;
+}
+
+
+/*----------------------------------------------------------------------------*/
+table
+{
+    margin: 2rem auto;
+}
+
+
+/*----------------------------------------------------------------------------*/
+#content
+{
+    width: $WIDTH;
+}
+
+/*----------------------------------------------------------------------------*/
+#image
+{
+    position: relative;
+    text-transform: uppercase;
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > img
+    {
+        display: block;
+        width: $WIDTH;
+        height: $HEIGHT;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    & > div
+    {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 1.5rem;
+        color: hsl(0, 0%, 70%);
+    }
+}
+
+
+/*----------------------------------------------------------------------------*/
+a
+{
+    text-decoration: none;
+    color: hsl(0, 0%, 30%);
+}
+
+
+/*----------------------------------------------------------------------------*/
+.title,
+.label
+{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.title,
+.label,
+.value
+{
+    padding: 0.2rem;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.title
+{
+    padding-top: 2rem;
+    color: hsl(0, 0%, 20%);
+}
+
+
+/*----------------------------------------------------------------------------*/
+.label
+{
+    padding-top: 1.2rem;
+    color: hsl(0, 0%, 75%);
+    width: 8rem;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.delimeter
+{
+    color: hsl(0, 0%, 75%);
+    padding: 0 0.2rem;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.value
+{
+    color: hsl(0, 0%, 40%);
+}
+
+
+/*----------------------------------------------------------------------------*/
+.emphasised
+{
+    font-weight: 400;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.highlight
+{
+    font-variant-ligatures: common-ligatures;
+    hyphens: auto;
+    text-align: justify;
+    font-style: italic;
+    position: relative;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.details
+{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 1.2;
+    width: 75%;
+}
