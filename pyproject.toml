@@ -19,7 +19,7 @@ packages = [{include = "scripts"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 tomlkit = "~0.7"
-pillow = "~8.0"
+pillow = "~9.3"
 weasyprint = "51"
 htmlmin = "~0.1"
 dominate = "~2.6"
